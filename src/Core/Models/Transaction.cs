@@ -1,6 +1,8 @@
-private class Currency{
-    private string code;
-    private string region;
+// docs/implementation_design/transaction_states.md
+public enum TransactionState{
+    Pending,
+    Initiated,
+    Completed
 }
 
 private class Amount{
@@ -9,7 +11,7 @@ private class Amount{
 }
 
 class Transaction{
-    private int amount;
+    private Amount amount;
     private BankAccount senderAccount;
     private BankAccount recipientAccount;
 }
